@@ -1,1 +1,118 @@
 @import "tailwindcss";
+
+@theme {
+  --color-bg: #f3eeea;
+  --color-main-text: #645349;
+  --color-main-btn: #f97000;
+
+  --animate-pulsed: pulsed 2s ease-in-out infinite;
+  --animate-pulsebtn: pulsebtn 1s ease-in-out infinite;
+  --animate-spin-20: spin 20s ease-in-out infinite;
+  --animate-spin-3: spin 3s ease-in-out;
+
+  --breakpoint-xs: 30rem;
+
+  @keyframes pulsed {
+    0% {
+      opacity: 1;
+    }
+    20% {
+      opacity: 1;
+    }
+    40% {
+      opacity: 1;
+    }
+    70% {
+      opacity: 0.7;
+      border-width: 2px;
+    }
+    90% {
+      opacity: 0.1;
+    }
+    100% {
+      width: 480px;
+      height: 480px;
+      opacity: 0;
+    }
+  }
+
+  @keyframes pulsebtn {
+    0% {
+      box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+      box-shadow: 0 0 0 30px rgba(255, 255, 255, 0);
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.anim-delay-0 {
+  animation-delay: 0;
+}
+
+.anim-delay-1 {
+  animation-delay: 1s;
+}
+
+.text-ring [style*="--i"] {
+  font-size: 60px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(calc(360deg / var(--total) * var(--i)))
+    translateY(calc(var(--radius, 5) * -1.35ch));
+}
+
+#snowflake {
+  max-width: 200px;
+
+  @media screen and (min-width: 992px) {
+    max-width: 300px;
+  }
+
+  @media screen and (min-width: 1576px) {
+    max-width: 400px;
+  }
+}
+
+.snow {
+  font-size: 20px;
+  position: fixed;
+  bottom: 0;
+  transform: translateY(50vh) rotate(180deg);
+  animation: fallMobile 15s linear forwards;
+
+  @media screen and (min-width: 1024px) {
+    animation: fall 15s linear forwards;
+  }
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(-250vh) translateX(500px);
+  }
+}
+
+@keyframes fallMobile {
+  to {
+    transform: translateY(-250vh) translateX(100px);
+  }
+}

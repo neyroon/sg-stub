@@ -194,15 +194,15 @@ export default function Page() {
               Мелодия этого дня
             </p>
             <div className="w-[90%] h-[1526px] bg-[#E0D0C080] rounded-[80px] mt-[80px] relative ">
-              <p className="font-semibold h-[225px] text-[40px] sm:text-[70px] mt-[22px] leading-[75px] text-main-text text-center 2xl:text-left">
+              <p className="font-semibold h-[225px] p-[10px] text-[40px] sm:text-[70px] mt-[22px] leading-[75px] text-main-text text-center 2xl:text-left">
                 {song?.songText}
               </p>
               <img
                 src={song?.songImage}
                 alt=""
-                className="absolute top-[calc(50%+20px)] left-[50%] translate-[-50%] drop-shadow-[80px_80px_60px_#A38D7C4D] w-[1457px] h-[1457px] max-w-[1457px]"
+                className="absolute top-[calc(40%+20px)] left-[50%] translate-[-50%] drop-shadow-[80px_80px_60px_#A38D7C4D] w-[1457px] h-[1457px] max-w-[1457px]"
               />
-              <div className="absolute top-[calc(50%)] left-[calc(50%)] translate-[-50%] z-10">
+              <div className="absolute top-[calc(40%)] left-[calc(50%)] translate-[-50%] z-10">
                 {!isPlay && (
                   <div className="relative  animate-spin-20">
                     <svg xmlns="http://www.w3.org/2000/svg" width="461" height="453" viewBox="0 0 461 453" fill="none">
@@ -317,7 +317,7 @@ export default function Page() {
                   max={100}
                   ref={progressRef}
                   className={clsx(
-                    "w-[80%] h-[33px] rounded-[30px] [&::-webkit-progress-bar]:bg-[#F3EEEA] [&::-webkit-progress-value]:bg-[#C5AC90] absolute top-[80%] left-[50%] translate-x-[-50%] opacity-0 transition-opacity duration-200 overflow-hidden",
+                    "w-[80%] h-[33px] rounded-[30px] [&::-webkit-progress-bar]:bg-[#F3EEEA] [&::-webkit-progress-value]:bg-[#C5AC90] absolute top-[60%] left-[50%] translate-x-[-50%] opacity-0 transition-opacity duration-200 overflow-hidden",
                     { "opacity-100": isPlay },
                   )}
                 ></progress>

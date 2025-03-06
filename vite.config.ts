@@ -8,5 +8,4 @@ export default defineConfig({
   build: {
     target: "es2022",
   },
-  base: "https://github.com/neyroon/sg-stub",
 });

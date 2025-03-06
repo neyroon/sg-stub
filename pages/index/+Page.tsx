@@ -343,7 +343,7 @@ export default function Page() {
           </div>
         </div>
         {isSpinEnd && (
-          <div className="mt-[80px] mb-[80px] text-center">
+          <div className="mt-[80px] mb-[80px] text-center px-14">
             <span className="font-medium text-[20px] text-main-text">
               Музыку сочинила команда SG <br />
               для вашего особенного настроения. <br />

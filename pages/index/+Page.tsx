@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Logo } from "./logo";
 import "../../layouts/tailwind.css";
-import "../../layouts/style.css";
 import bigPlant from "../../assets/big-plant.png";
 import catridge from "../../assets/catridge.png";
 import flower1 from "../../assets/flower-1.png";

@@ -118,7 +118,7 @@ export default function Page() {
       }, 9000);
     };
 
-    setInterval(createFlower, 1000);
+    setInterval(createFlower, 2400);
   }, []);
 
   const stepText = (

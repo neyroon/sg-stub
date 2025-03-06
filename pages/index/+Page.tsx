@@ -574,7 +574,7 @@ export default function Page() {
         </>
       )}
       {isSpinEnd && (
-        <div className="mt-[80px] ml-[100px] 2xl:block flex flex-col items-center justify-center">
+        <div className="mt-[80px] 3xl:ml-[100px] 2xl:block flex flex-col items-center justify-center">
           <span className="font-medium text-[20px] text-main-text z-10">
             Музыку сочинила команда SG <br />
             для вашего особенного настроения. <br />

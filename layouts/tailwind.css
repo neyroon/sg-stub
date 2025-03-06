@@ -11,6 +11,7 @@
   --animate-spin-3: spin 3s ease-in-out;
 
   --breakpoint-xs: 30rem;
+  --breakpoint-3xl: 100rem;
 
   @keyframes pulsed {
     0% {

@@ -117,15 +117,15 @@ export default function Page() {
   );
 
   const stepSpinEndText = (
-    <div className=" lg:ml-[101px] lg:mt-[33px] 2xl:mt-[101px] lg:w-[30vw] 2xl:w-[560px] lg:block flex items-center justify-center flex-col">
-      <p className="font-medium lg:text-[30px] 2xl:text-[43px]   2xl:mt-[100px]  text-main-text text-center lg:text-left">
+    <div className=" lg:ml-[101px] lg:mt-[33px] 3xl:mt-[101px] lg:w-[30vw] 3xl:w-[560px] lg:block flex items-center justify-center flex-col">
+      <p className="font-medium lg:text-[30px] 3xl:text-[43px]   3xl:mt-[100px]  text-main-text text-center lg:text-left">
         Мелодия этого дня
       </p>
       <p
         dangerouslySetInnerHTML={{ __html: song?.songText }}
-        className="font-semibold h-[225px] lg:text-[50px] 2xl:text-[70px] mt-[10px] 2xl:mt-[22px] leading-[75px] text-main-text text-center lg:text-left"
+        className="font-semibold h-[225px] lg:text-[50px] leading-[55px] 3xl:text-[70px] mt-[10px] 3xl:mt-[22px] 3xl:leading-[75px] text-main-text text-center lg:text-left"
       ></p>
-      <p className="font-medium text-[30px] leading-none mt-[20px] 2xl:mt-[67px]  text-main-text text-center lg:text-left">
+      <p className="font-medium text-[30px] leading-[105%] mt-[15px] 3xl:mt-[67px]  text-main-text text-center lg:text-left">
         А здесь можно скачать
         <br />
         милые открытки
@@ -136,7 +136,7 @@ export default function Page() {
       </p>
       <a
         href="https://disk.yandex.ru/d/oiCwBihZqo8bog"
-        className="p-[38px] ml-[-20px] font-bold text-[30px] text-main-text bg-white block w-fit mt-[24px] 2xl:mt-[44px] rounded-[80px] "
+        className="p-[38px] ml-[-20px] font-bold text-[30px] text-main-text bg-white block w-fit mt-[24px] 3xl:mt-[44px] rounded-[80px] z-10 relative"
       >
         Скачать комплимент
       </a>
@@ -181,7 +181,7 @@ export default function Page() {
             <img
               src={song?.songImage}
               alt=""
-              className="absolute top-[calc(50%+15px)] sm:top-[calc(50%+15px)] left-[50%] translate-[-50%] drop-shadow-[80px_80px_60px_#A38D7C4D] w-[542px] h-[542px] max-w-[542px] z-10"
+              className="absolute top-[calc(50%+15px)] sm:top-[calc(50%+15px)] left-[50%] translate-[-50%] drop-shadow-[80px_80px_60px_#A38D7C4D] w-[542px] h-[542px] max-w-[542px] z-9"
             />
             <div className="absolute top-[calc(50%)] sm:top-[calc(50%)] left-[calc(50%)] translate-[-50%] z-10">
               {!isPlay && (
@@ -366,9 +366,9 @@ export default function Page() {
     );
 
   return (
-    <div className=" bg-bg flex flex-col lg:flex-row  min-h-screen  overflow-hidden lg:h-[100vh] gap-[10px]">
+    <div className=" bg-bg flex flex-col lg:flex-row  min-h-screen  overflow-hidden lg:h-[100vh] gap-[10px] relative">
       <div className="px-[25px] sm:p-0 shrink-0 z-10">
-        <Logo className="sm:ml-[95px] 2xl:ml-[101px] mt-[25px]  2xl:mt-[87px] w-[50px] h-[50px] lg:w-[124px] lg:h-[124px]" />
+        <Logo className="sm:ml-[95px] 2xl:ml-[101px] mt-[35px]  2xl:mt-[87px] w-[50px] h-[50px] lg:w-[80px] lg:h-[80px]" />
         <>{isSpinEnd ? stepSpinEndText : stepText}</>
       </div>
       {!isSpinEnd && (
@@ -555,7 +555,7 @@ export default function Page() {
               <button className="w-[100px] h-[100px] sm:w-[200px] sm:h-[200px] lg:w-[290px] lg:h-[290px] flex items-center justify-center bg-white rounded-full text-main-btn font-bold text-[20px] leading-[120%] sm:text-[60px] cursor-pointer">
                 {isSpinStart ? (
                   <svg
-                    className="rotate-[-45deg]"
+                    className="rotate-[-45deg] w-[60px] h-[60px] lg:w-[106px] lg:h-[106px]"
                     width="106"
                     height="106"
                     viewBox="0 0 106 106"
@@ -592,15 +592,15 @@ export default function Page() {
           </span>
           <div
             className={
-              "w-[60vw] 2xl:w-[858px] h-[83vh] bg-[#E0D0C080] rounded-[80px] rounded-b-none mt-[60px] relative transition-[height] "
+              "w-[60vw] 2xl:w-[858px] h-[calc(100vh-175px)] bg-[#E0D0C080] rounded-[80px] rounded-b-none mt-[60px] relative transition-[height] "
             }
           >
             <img
               src={song?.songImage}
               alt=""
-              className="absolute top-[53%] left-[50%] translate-[-50%] drop-shadow-[80px_80px_60px_#A38D7C4D] 2xl:w-[1457px] 2xl:h-[1457px] 2xl:max-w-[1457px] w-[100vw] h-[100vw] max-w-[100vw]  z-10"
+              className="absolute top-[48%] left-[50%] translate-[-50%] drop-shadow-[80px_80px_60px_#A38D7C4D] 2xl:w-[1457px] 2xl:h-[1457px] 2xl:max-w-[1457px] w-[100vw] h-[100vw] max-w-[100vw]  z-9"
             />
-            <div className="absolute top-[calc(50%)] left-[calc(50%)] translate-[-50%] z-10">
+            <div className="absolute top-[calc(45%)] left-[calc(50%)] translate-[-50%] z-10">
               {!isPlay && (
                 <div className="relative  animate-spin-20">
                   <svg xmlns="http://www.w3.org/2000/svg" width="461" height="453" viewBox="0 0 461 453" fill="none">
@@ -708,29 +708,27 @@ export default function Page() {
                 )}
               </button>
             </div>
-            <div>
-              <audio preload="none" src={song?.songLink} ref={audioRef}></audio>
-              <progress
-                value={0}
-                max={100}
-                ref={progressRef}
-                className={clsx(
-                  "w-[80%] h-[33px] rounded-[30px] [&::-webkit-progress-bar]:bg-[#F3EEEA] [&::-webkit-progress-value]:bg-[#C5AC90] absolute 2xl:bottom-[22vh] bottom-[17vh] left-[50%] translate-x-[-50%] opacity-0 transition-opacity duration-200 overflow-hidden z-10",
-                  { "opacity-100": isPlay },
-                )}
-              ></progress>
-              <button
-                className="bg-white animate-pulsebtn xs:w-[188px] xs:h-[122px] w-[149px] h-[89px]  sm:mr-[45px] flex items-center justify-center rounded-[80px] absolute bottom-[0] 2xl:bottom-[7vh] right-[5%] z-10"
-                onClick={handleShare}
-              >
-                <svg width="75" height="64" viewBox="0 0 75 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M41.4289 62.6521V44.9188C36.4809 45.3884 30.5488 46.4857 24.1491 48.8361C12.2744 53.1957 4.29124 59.8405 0 64C0.106271 60.1543 0.969196 44.6281 13.437 31.4756C22.8377 21.5601 34.0919 18.0008 41.431 16.7161V0L75 31.3261L41.431 62.6521H41.4289Z"
-                    fill="#E9DFD5"
-                  />
-                </svg>
-              </button>
-            </div>
+            <audio preload="none" src={song?.songLink} ref={audioRef}></audio>
+            <progress
+              value={0}
+              max={100}
+              ref={progressRef}
+              className={clsx(
+                "w-[80%] h-[33px] rounded-[30px] [&::-webkit-progress-bar]:bg-[#F3EEEA] [&::-webkit-progress-value]:bg-[#C5AC90] absolute 2xl:bottom-[22vh] bottom-[20vh] left-[50%] translate-x-[-50%] opacity-0 transition-opacity duration-200 overflow-hidden z-10",
+                { "opacity-100": isPlay },
+              )}
+            ></progress>
+            <button
+              className="bg-white animate-pulsebtn xs:w-[188px] xs:h-[122px] w-[149px] h-[89px]  sm:mr-[45px] flex items-center justify-center rounded-[80px] absolute bottom-[3vh] 2xl:bottom-[7vh] right-[5%] z-10"
+              onClick={handleShare}
+            >
+              <svg width="75" height="64" viewBox="0 0 75 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M41.4289 62.6521V44.9188C36.4809 45.3884 30.5488 46.4857 24.1491 48.8361C12.2744 53.1957 4.29124 59.8405 0 64C0.106271 60.1543 0.969196 44.6281 13.437 31.4756C22.8377 21.5601 34.0919 18.0008 41.431 16.7161V0L75 31.3261L41.431 62.6521H41.4289Z"
+                  fill="#E9DFD5"
+                />
+              </svg>
+            </button>
           </div>
         </div>
       )}
@@ -739,7 +737,7 @@ export default function Page() {
           src={flower1}
           alt="Цветок"
           className={clsx(
-            "fixed z-1 lg:z-0 lg:bottom-[-283px] bottom-[-70px] left-[20vw] w-[186px] h-[186px] lg:w-[586px] lg:h-[586px] drop-shadow-[80px_80px_60px_#A38D7C4D]",
+            "absolute z-1 lg:z-0 lg:bottom-[-283px] bottom-[-70px] left-[20vw] w-[186px] h-[186px] lg:w-[586px] lg:h-[586px] drop-shadow-[80px_80px_60px_#A38D7C4D]",
             { "lg:w-[397px]! lg:h-[397px]! lg:right-[-5vw] lg:bottom-[20vh] lg:left-[auto]": isSpinEnd },
           )}
         />
@@ -747,7 +745,7 @@ export default function Page() {
           src={flower2}
           alt="Цветок"
           className={clsx(
-            "fixed z-1 lg:z-0 top-[0] right-[-40px] w-[147px] h-[147px] lg:top-[auto] lg:bottom-[180px] lg:left-[-100px] lg:w-[309px] lg:h-[309px] drop-shadow-[80px_80px_60px_#A38D7C4D]",
+            "absolute z-1 lg:z-0 top-[-20px] right-[-40px] w-[147px] h-[147px] lg:top-[auto] lg:bottom-[6vh] lg:left-[-100px] lg:w-[309px] lg:h-[309px] drop-shadow-[80px_80px_60px_#A38D7C4D]",
             { " lg:left-[35vw] lg:bottom-[35vh] ": isSpinEnd },
           )}
         />
@@ -755,7 +753,7 @@ export default function Page() {
           src={flower3}
           alt="Цветок"
           className={clsx(
-            "fixed z-1 lg:z-0 bottom-[50px] right-[0] w-[127px] h-[127px] lg:bottom-[auto] lg:top-[-140px] lg:right-[-140px] lg:w-[400px] lg:h-[400px] drop-shadow-[80px_80px_60px_#A38D7C4D]",
+            "absolute z-1 lg:z-0 bottom-[50px] right-[0] w-[127px] h-[127px] lg:bottom-[auto] lg:top-[-140px] lg:right-[-140px] lg:w-[400px] lg:h-[400px] drop-shadow-[80px_80px_60px_#A38D7C4D]",
             { " lg:w-[299px]! lg:h-[299px]! lg:bottom-[-100px]! lg:right-[30vw] lg:top-[auto] ": isSpinEnd },
           )}
         />
@@ -763,7 +761,7 @@ export default function Page() {
           src={flower4}
           alt="Цветок"
           className={clsx(
-            "fixed z-1 lg:z-0 bottom-[74px] left-[0] w-[153px] h-[153px] lg:bottom-[auto] lg:top-[-130px] lg:left-[40vw] lg:w-[484px] lg:h-[484px] drop-shadow-[80px_80px_60px_#A38D7C4D]",
+            "absolute z-1 lg:z-0 bottom-[74px] left-[0] w-[153px] h-[153px] lg:bottom-[auto] lg:top-[-130px] lg:left-[40vw] lg:w-[484px] lg:h-[484px] drop-shadow-[80px_80px_60px_#A38D7C4D]",
             { " lg:w-[607px]! lg:h-[607px]! lg:top-[20vh]! lg:right-[30vw]  ": isSpinEnd },
           )}
         />

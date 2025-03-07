@@ -136,7 +136,7 @@ export default function Page() {
       </p>
       <a
         href="https://disk.yandex.ru/d/oiCwBihZqo8bog"
-        className="p-[38px] ml-[-20px] font-bold text-[30px] text-main-text bg-white block w-fit mt-[24px] 2xl:mt-[44px] rounded-[80px]"
+        className="p-[38px] ml-[-20px] font-bold text-[30px] text-main-text bg-white block w-fit mt-[24px] 2xl:mt-[44px] rounded-[80px] "
       >
         Скачать комплимент
       </a>
@@ -322,7 +322,7 @@ export default function Page() {
               </p>
               <a
                 href="https://disk.yandex.ru/d/oiCwBihZqo8bog"
-                className="p-[19px]  font-bold text-[16px] leading-[120%] text-main-text bg-white block w-full text-center mt-[25px] rounded-[500px]"
+                className="p-[19px]  font-bold text-[16px] leading-[120%] text-main-text bg-white block w-full text-center mt-[25px] rounded-[500px] z-10 relative"
               >
                 Скачать комплимент
               </a>

@@ -145,7 +145,7 @@ export default function Page() {
 
   if (isMobile && isSpinEnd)
     return (
-      <div className=" bg-bg flex flex-col 2xl:flex-row  min-h-screen overflow-hidden 2xl:h-[1140px]">
+      <div className=" bg-bg flex flex-col 2xl:flex-row  min-h-screen overflow-hidden 2xl:h-[1140px] relative">
         <div className="px-[25px] sm:p-0 shrink-0 z-10">
           <div className="flex items-center justify-between mt-[25px]">
             <Logo className="w-[50px] h-[50px] xs:w-[100px] xs:h-[100px]  sm:ml-[45px] 2xl:ml-[101px] " />
@@ -344,22 +344,22 @@ export default function Page() {
           <img
             src={flower1}
             alt="Цветок"
-            className="fixed z-1 lg:z-0  bottom-[30vh] right-[-70px] w-[160px] h-[160px]  drop-shadow-[80px_80px_60px_#A38D7C4D]"
+            className="absolute z-1 lg:z-0  bottom-[30vh] right-[-70px] w-[160px] h-[160px]  drop-shadow-[80px_80px_60px_#A38D7C4D]"
           />
           <img
             src={flower2}
             alt="Цветок"
-            className="fixed z-1 lg:z-0 top-[30vh] left-[10vw] w-[147px] h-[147px] drop-shadow-[80px_80px_60px_#A38D7C4D]"
+            className="absolute z-1 lg:z-0 top-[34vh] left-[10vw] w-[147px] h-[147px] drop-shadow-[80px_80px_60px_#A38D7C4D]"
           />
           <img
             src={flower3}
             alt="Цветок"
-            className="fixed z-1 lg:z-0 bottom-[9vh] right-[-20px] w-[114px] h-[114px]  drop-shadow-[80px_80px_60px_#A38D7C4D]"
+            className="absolute z-1 lg:z-0 bottom-[9vh] right-[-20px] w-[114px] h-[114px]  drop-shadow-[80px_80px_60px_#A38D7C4D]"
           />
           <img
             src={flower4}
             alt="Цветок"
-            className="fixed z-1 lg:z-0 bottom-[15vh] left-[-100px] w-[233px] h-[233px]  drop-shadow-[80px_80px_60px_#A38D7C4D]"
+            className="absolute z-1 lg:z-0 bottom-[15vh] left-[-100px] w-[233px] h-[233px]  drop-shadow-[80px_80px_60px_#A38D7C4D]"
           />
         </div>
       </div>

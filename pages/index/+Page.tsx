@@ -359,7 +359,7 @@ export default function Page() {
           <img
             src={flower4}
             alt="Цветок"
-            className="fixed z-1 lg:z-0 bottom-[30vh] left-[-100px] w-[233px] h-[233px]  drop-shadow-[80px_80px_60px_#A38D7C4D]"
+            className="fixed z-1 lg:z-0 bottom-[15vh] left-[-100px] w-[233px] h-[233px]  drop-shadow-[80px_80px_60px_#A38D7C4D]"
           />
         </div>
       </div>

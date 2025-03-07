@@ -6,6 +6,7 @@
   --color-main-btn: #f97000;
 
   --animate-pulsed: pulsed 2s ease-in-out infinite;
+  --animate-pulsedmobile: pulsedmobile 2s ease-in-out infinite;
   --animate-pulsebtn: pulsebtn 1s ease-in-out infinite;
   --animate-spin-20: spin 20s ease-in-out infinite;
   --animate-spin-3: spin 3s ease-in-out;
@@ -38,6 +39,31 @@
     }
   }
 
+  @keyframes pulsedmobile {
+    0% {
+      opacity: 1;
+    }
+    20% {
+      opacity: 1;
+    }
+    40% {
+      opacity: 1;
+    }
+    70% {
+      opacity: 0.7;
+      border-width: 2px;
+    }
+    90% {
+      opacity: 0.1;
+    }
+    100% {
+      width: 200px;
+      height: 200px;
+      opacity: 0;
+      border-width: 0;
+    }
+  }
+
   @keyframes pulsebtn {
     0% {
       box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.5);
@@ -60,6 +86,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Inter", sans-serif;
+  @media screen and (min-width: 1280px) {
+    overflow: hidden;
+  }
 }
 
 * {
@@ -85,12 +114,6 @@ body {
 }
 
 #snowflake {
-  max-width: 200px;
-
-  @media screen and (min-width: 992px) {
-    max-width: 300px;
-  }
-
   @media screen and (min-width: 1576px) {
     max-width: 400px;
   }

@@ -117,15 +117,15 @@ export default function Page() {
   );
 
   const stepSpinEndText = (
-    <div className=" lg:ml-[101px] mt-[101px] lg:w-[30vw] 2xl:w-[560px] lg:block flex items-center justify-center flex-col">
-      <p className="font-medium lg:text-[30px] 2xl:text-[43px]  mt-[100px]  text-main-text text-center lg:text-left">
+    <div className=" lg:ml-[101px] lg:mt-[33px] 2xl:mt-[101px] lg:w-[30vw] 2xl:w-[560px] lg:block flex items-center justify-center flex-col">
+      <p className="font-medium lg:text-[30px] 2xl:text-[43px]   2xl:mt-[100px]  text-main-text text-center lg:text-left">
         Мелодия этого дня
       </p>
       <p
         dangerouslySetInnerHTML={{ __html: song?.songText }}
-        className="font-semibold h-[225px] lg:text-[50px] 2xl:text-[70px] mt-[22px] leading-[75px] text-main-text text-center lg:text-left"
+        className="font-semibold h-[225px] lg:text-[50px] 2xl:text-[70px] mt-[10px] 2xl:mt-[22px] leading-[75px] text-main-text text-center lg:text-left"
       ></p>
-      <p className="font-medium text-[30px] leading-none mt-[67px]  text-main-text text-center lg:text-left">
+      <p className="font-medium text-[30px] leading-none mt-[20px] 2xl:mt-[67px]  text-main-text text-center lg:text-left">
         А здесь можно скачать
         <br />
         милые открытки
@@ -136,7 +136,7 @@ export default function Page() {
       </p>
       <a
         href="https://disk.yandex.ru/d/oiCwBihZqo8bog"
-        className="p-[38px] ml-[-20px] font-bold text-[30px] text-main-text bg-white block w-fit mt-[44px] rounded-[80px]"
+        className="p-[38px] ml-[-20px] font-bold text-[30px] text-main-text bg-white block w-fit mt-[24px] 2xl:mt-[44px] rounded-[80px]"
       >
         Скачать комплимент
       </a>
@@ -181,7 +181,7 @@ export default function Page() {
             <img
               src={song?.songImage}
               alt=""
-              className="absolute top-[calc(50%+15px)] sm:top-[calc(50%+15px)] left-[50%] translate-[-50%] drop-shadow-[80px_80px_60px_#A38D7C4D] w-[542px] h-[542px] max-w-[542px] z-1"
+              className="absolute top-[calc(50%+15px)] sm:top-[calc(50%+15px)] left-[50%] translate-[-50%] drop-shadow-[80px_80px_60px_#A38D7C4D] w-[542px] h-[542px] max-w-[542px] z-10"
             />
             <div className="absolute top-[calc(50%)] sm:top-[calc(50%)] left-[calc(50%)] translate-[-50%] z-10">
               {!isPlay && (
@@ -366,9 +366,9 @@ export default function Page() {
     );
 
   return (
-    <div className=" bg-bg flex flex-col lg:flex-row  min-h-screen  overflow-hidden lg:h-[100vh] ">
+    <div className=" bg-bg flex flex-col lg:flex-row  min-h-screen  overflow-hidden lg:h-[100vh] gap-[10px]">
       <div className="px-[25px] sm:p-0 shrink-0 z-10">
-        <Logo className="sm:ml-[95px] 2xl:ml-[101px] mt-[25px] lg:mt-[87px] w-[50px] h-[50px] lg:w-[124px] lg:h-[124px]" />
+        <Logo className="sm:ml-[95px] 2xl:ml-[101px] mt-[25px]  2xl:mt-[87px] w-[50px] h-[50px] lg:w-[124px] lg:h-[124px]" />
         <>{isSpinEnd ? stepSpinEndText : stepText}</>
       </div>
       {!isSpinEnd && (
@@ -584,7 +584,7 @@ export default function Page() {
         </>
       )}
       {isSpinEnd && (
-        <div className="mt-[80px] 3xl:ml-[100px] lg:block flex flex-col items-center justify-center">
+        <div className="mt-[24px] 2xl:mt-[80px] 3xl:ml-[100px] lg:block flex flex-col items-center justify-center">
           <span className="font-medium text-[20px] leading-none text-main-text z-10 relative">
             Музыку сочинила команда SG <br />
             для вашего особенного настроения! <br />
@@ -592,13 +592,13 @@ export default function Page() {
           </span>
           <div
             className={
-              "w-[50vw] 2xl:w-[858px] h-[78vh] bg-[#E0D0C080] rounded-[80px] rounded-b-none mt-[80px] relative transition-[height] "
+              "w-[60vw] 2xl:w-[858px] h-[83vh] bg-[#E0D0C080] rounded-[80px] rounded-b-none mt-[60px] relative transition-[height] "
             }
           >
             <img
               src={song?.songImage}
               alt=""
-              className="absolute top-[53%] left-[50%] translate-[-50%] drop-shadow-[80px_80px_60px_#A38D7C4D] w-[1457px] h-[1457px] max-w-[1457px] z-10"
+              className="absolute top-[53%] left-[50%] translate-[-50%] drop-shadow-[80px_80px_60px_#A38D7C4D] 2xl:w-[1457px] 2xl:h-[1457px] 2xl:max-w-[1457px] w-[100vw] h-[100vw] max-w-[100vw]  z-10"
             />
             <div className="absolute top-[calc(50%)] left-[calc(50%)] translate-[-50%] z-10">
               {!isPlay && (
@@ -715,12 +715,12 @@ export default function Page() {
                 max={100}
                 ref={progressRef}
                 className={clsx(
-                  "w-[80%] h-[33px] rounded-[30px] [&::-webkit-progress-bar]:bg-[#F3EEEA] [&::-webkit-progress-value]:bg-[#C5AC90] absolute bottom-[22vh] left-[50%] translate-x-[-50%] opacity-0 transition-opacity duration-200 overflow-hidden",
+                  "w-[80%] h-[33px] rounded-[30px] [&::-webkit-progress-bar]:bg-[#F3EEEA] [&::-webkit-progress-value]:bg-[#C5AC90] absolute 2xl:bottom-[22vh] bottom-[17vh] left-[50%] translate-x-[-50%] opacity-0 transition-opacity duration-200 overflow-hidden z-10",
                   { "opacity-100": isPlay },
                 )}
               ></progress>
               <button
-                className="bg-white animate-pulsebtn xs:w-[188px] xs:h-[122px] w-[149px] h-[89px]  sm:mr-[45px] flex items-center justify-center rounded-[80px] absolute bottom-[7vh] right-[5%]"
+                className="bg-white animate-pulsebtn xs:w-[188px] xs:h-[122px] w-[149px] h-[89px]  sm:mr-[45px] flex items-center justify-center rounded-[80px] absolute bottom-[0] 2xl:bottom-[7vh] right-[5%] z-10"
                 onClick={handleShare}
               >
                 <svg width="75" height="64" viewBox="0 0 75 64" fill="none" xmlns="http://www.w3.org/2000/svg">

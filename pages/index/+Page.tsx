@@ -93,16 +93,22 @@ export default function Page() {
     }
   };
 
+  const handleResetButton = () => {
+    setIsPlay(false);
+    setIsSpinStart(false);
+    setIsSpinEnd(false);
+  };
+
   useEffect(() => {
     setIsMobile(window.innerWidth < 1200);
   }, []);
 
   const stepText = (
-    <div className=" lg:ml-[101px] lg:mt-[101px] mb-[25px]">
-      <p className="font-bold lg:font-semibold text-[24px] lg:text-[50px] 2xl:text-[70px] leading-[120%] lg:leading-[75px] mt-[40px] lg:mt-[100px] text-main-text text-center lg:text-left">
+    <div className="  lg:ml-[79px] 2xl:ml-[101px] lg:mt-[101px] mb-[25px]">
+      <p className="font-bold lg:font-semibold text-[24px] lg:text-[43px] xxl:text-[47px] 2xl:text-[70px] leading-[120%] lg:leading-[75px] mt-[40px] lg:mt-[100px] text-main-text text-center lg:text-left">
         {isSpinStart ? <>Минутку!</> : <>Милые девушки,</>}
       </p>
-      <p className="font-normal lg:font-medium text-[16px] lg:text-[33px] 2xl:text-[43px] leading-[120%] lg:leading-none mt-[25px] lg:mt-[22px] text-main-text text-center lg:text-left">
+      <p className="font-normal lg:font-medium text-[16px] lg:text-[30px] xxl:text-[33px] 2xl:text-[43px] leading-[120%] lg:leading-none mt-[25px] lg:mt-[22px] text-main-text text-center lg:text-left">
         {isSpinStart ? (
           <>
             МАРТгаритка <br /> выбирает один <br /> из 8 лепестков…
@@ -117,15 +123,15 @@ export default function Page() {
   );
 
   const stepSpinEndText = (
-    <div className=" lg:ml-[101px] lg:mt-[33px] 3xl:mt-[101px] lg:w-[30vw] 3xl:w-[560px] lg:block flex items-center justify-center flex-col">
-      <p className="font-medium lg:text-[30px] 3xl:text-[43px]   3xl:mt-[100px]  text-main-text text-center lg:text-left">
+    <div className=" lg:ml-[79px] 2xl:ml-[101px] lg:mt-[71px] xxl:mt-[92px] 2xl:mt-[101px] lg:w-[30vw] 2xl:w-[560px] lg:block flex items-center justify-center flex-col">
+      <p className="font-medium lg:text-[30px] xxl:text-[35px] 2xl:text-[43px]   2xl:mt-[100px]  text-main-text text-center lg:text-left">
         Мелодия этого дня
       </p>
       <p
         dangerouslySetInnerHTML={{ __html: song?.songText }}
-        className="font-semibold h-[225px] lg:text-[50px] leading-[55px] 3xl:text-[70px] mt-[10px] 3xl:mt-[22px] 3xl:leading-[75px] text-main-text text-center lg:text-left"
+        className="font-semibold lg:h-[135px] xxl:h-[225px] lg:text-[43px] lg:leading-[45px] xxl:text-[55px] xxl:leading-[61px] 2xl:text-[70px] mt-[20px] 2xl:mt-[22px] 2xl:leading-[75px] text-main-text text-center lg:text-left"
       ></p>
-      <p className="font-medium text-[30px] leading-[105%] mt-[15px] 3xl:mt-[67px]  text-main-text text-center lg:text-left">
+      <p className="font-medium lg:text-[22px] xxl:text-[26px] 2xl:text-[30px] leading-[100%] xxl:leading-[105%] mt-[15px] lg:mt-[42px] 2xl:mt-[67px]  text-main-text text-center lg:text-left">
         А здесь можно скачать
         <br />
         милые открытки
@@ -136,7 +142,7 @@ export default function Page() {
       </p>
       <a
         href="https://disk.yandex.ru/d/oiCwBihZqo8bog"
-        className="p-[38px] ml-[-20px] font-bold text-[30px] text-main-text bg-white block w-fit mt-[24px] 3xl:mt-[44px] rounded-[80px] z-10 relative"
+        className="px-[41px] pt-[30px] pb-[32px] 2xl:px-[48px] 2xl:pt-[45px] 2xl:pb-[41px] ml-[-14px] font-bold lg:text-[22px] xxl:text-[25px] 2xl:text-[30px] text-main-text bg-white block w-fit mt-[29px] 2xl:mt-[44px] rounded-[80px] z-10 relative mb-[20px]"
       >
         Скачать комплимент
       </a>
@@ -322,7 +328,7 @@ export default function Page() {
               </p>
               <a
                 href="https://disk.yandex.ru/d/oiCwBihZqo8bog"
-                className="p-[19px]  font-bold text-[16px] leading-[120%] text-main-text bg-white block w-full text-center mt-[25px] rounded-[500px] z-10 relative"
+                className="p-[19px]  font-bold text-[16px] leading-[120%] text-main-text bg-white block w-full text-center mt-[25px] rounded-[500px] z-10 relative "
               >
                 Скачать комплимент
               </a>
@@ -338,6 +344,12 @@ export default function Page() {
             <p className="font-medium text-[10px] sm:text-[19px] leading-[140%] text-main-text mt-[10px]">
               С восхищением к женщинам, <LogoText className="inline w-[80px] h-[7px] sm:w-[95px] sm:h-[11px]" />
             </p>
+            <button
+              className="font-bold text-[15px] text-center py-[17px] px-[26px] bg-[#EADFD5] text-main-text rounded-[80px] mt-[30px] z-11"
+              onClick={handleResetButton}
+            >
+              Попробовать еще
+            </button>
           </div>
         )}
         <div className="">
@@ -366,9 +378,9 @@ export default function Page() {
     );
 
   return (
-    <div className=" bg-bg flex flex-col lg:flex-row  min-h-screen  overflow-hidden lg:h-[100vh] gap-[10px] relative">
+    <div className=" bg-bg flex flex-col lg:flex-row  min-h-screen  overflow-hidden lg:h-[100%] gap-[10px] relative">
       <div className="px-[25px] sm:p-0 shrink-0 z-10">
-        <Logo className="sm:ml-[95px] 2xl:ml-[101px] mt-[35px]  2xl:mt-[87px] w-[50px] h-[50px] lg:w-[80px] lg:h-[80px]" />
+        <Logo className="sm:ml-[95px] lg:ml-[79px] 2xl:ml-[101px] mt-[35px] lg:mt-[77px]  2xl:mt-[87px] w-[50px] h-[50px] lg:w-[89px] lg:h-[89px] xxl:w-[102px] xxl:h-[102px] xxl:w-[101px] xxl:h-[101px]" />
         <>{isSpinEnd ? stepSpinEndText : stepText}</>
       </div>
       {!isSpinEnd && (
@@ -382,7 +394,7 @@ export default function Page() {
               loading="eager"
               alt=""
               className={clsx(
-                "relative  lg:w-[92vh] 2xl:w-[100vh] 2xl:h-[120vh] lg:h-[100vh]  w-[100%] h-[120vw] lg:max-w-[100%] max-w-[none]  2xl:top-[-50px] object-contain 2xl:mt-0 ",
+                "relative  lg:w-[92vh] xxl:w-[100vh] xxl:h-[120vh] lg:h-[100vh]  w-[100%] h-[120vw] lg:max-w-[100%] max-w-[none]  xxl:top-[-50px] object-contain xxl:mt-0 ",
                 {
                   "animate-spin-3": isSpinStart,
                 },
@@ -397,16 +409,16 @@ export default function Page() {
             />
             <div
               className={clsx(
-                "absolute top-[60vw] lg:top-[48%] 2xl:top-[57vh] left-[50%] 2xl:left-[calc(50%+10px)] translate-[-50%] z-10",
+                "absolute top-[60vw] lg:top-[50%] xxl:top-[45%] 2xl:top-[57vh] left-[50%] 2xl:left-[calc(50%+10px)] translate-[-50%] z-10",
                 {
                   "animate-spin-3": isSpinStart,
                 },
               )}
             >
               {!isSpinStart && (
-                <div className="relative top-[50px] sm:top-[100px] lg:top-[140px] animate-spin-20">
+                <div className="relative top-[50px] sm:top-[100px] lg:top-[75px] xxl:top-[90px] 2xl:top-[140px] animate-spin-20">
                   <svg
-                    className="w-[200px] xs:w-[300px] sm:w-[461px] absolute top-[50%] left-[50%] translate-[-50%]"
+                    className="w-[200px]  sm:w-[310px] lg:w-[310px] 2xl:w-[461px] absolute top-[50%] left-[50%] translate-[-50%]"
                     width="461"
                     height="453"
                     viewBox="0 0 461 453"
@@ -552,7 +564,7 @@ export default function Page() {
                   </svg>
                 </div>
               )}
-              <button className="w-[100px] h-[100px] sm:w-[200px] sm:h-[200px] lg:w-[290px] lg:h-[290px] flex items-center justify-center bg-white rounded-full text-main-btn font-bold text-[20px] leading-[120%] sm:text-[60px] cursor-pointer">
+              <button className="w-[100px] h-[100px] sm:w-[200px] sm:h-[200px] lg:w-[158px] xxl:w-[185px] 2xl:w-[235px] lg:h-[158px] xxl:h-[185px] 2xl:h-[235px] flex items-center justify-center bg-white rounded-full text-main-btn font-bold text-[20px] leading-[120%] sm:text-[60px] lg:leading-[100%] lg:text-[35px] cursor-pointer">
                 {isSpinStart ? (
                   <svg
                     className="rotate-[-45deg] w-[60px] h-[60px] lg:w-[106px] lg:h-[106px]"
@@ -573,8 +585,8 @@ export default function Page() {
                   </svg>
                 ) : (
                   <>
-                    <span className="animate-pulsedmobile lg:animate-pulsed w-[100px] h-[100px] sm:w-[200px] sm:h-[200px] lg:w-[290px] lg:h-[290px] rounded-full  block absolute top-[50%] left-[50%] border-7 border-white shadow-white translate-[-50%]"></span>
-                    <span className="animate-pulsedmobile lg:animate-pulsed w-[100px] h-[100px] sm:w-[200px] sm:h-[200px] lg:w-[290px] lg:h-[290px] rounded-full  block absolute top-[50%] left-[50%] border-7 border-white shadow-white translate-[-50%] anim-delay-1"></span>
+                    <span className="animate-pulsedmobile sm:animate-pulsedmobilesm lg:animate-pulsed w-[100px] h-[100px] sm:w-[200px] sm:h-[200px] lg:w-[158px] 2xl:w-[290px] lg:h-[158px] 2xl:h-[290px] rounded-full  block absolute top-[50%] left-[50%] border-7 border-white shadow-white translate-[-50%]"></span>
+                    <span className="animate-pulsedmobile sm:animate-pulsedmobilesm lg:animate-pulsed w-[100px] h-[100px] sm:w-[200px] sm:h-[200px] lg:w-[158px] 2xl:w-[290px] lg:h-[158px] 2xl:h-[290px] rounded-full  block absolute top-[50%] left-[50%] border-7 border-white shadow-white translate-[-50%] anim-delay-1"></span>
                     <span className="relative z-5">жми</span>
                   </>
                 )}
@@ -585,20 +597,28 @@ export default function Page() {
       )}
       {isSpinEnd && (
         <div className="mt-[24px] 2xl:mt-[80px] 3xl:ml-[100px] lg:block flex flex-col items-center justify-center">
-          <span className="font-medium text-[20px] leading-none text-main-text z-10 relative">
-            Музыку сочинила команда SG <br />
-            для вашего особенного настроения! <br />
-            <br />С восхищением к женщинам, <LogoText className="inline" />
-          </span>
+          <div className="flex justify-between items-start">
+            <span className="font-medium text-[17px] xxl:text-[20px] leading-none text-main-text z-10 relative">
+              Музыку сочинила команда SG <br />
+              для вашего особенного настроения! <br />
+              <br />С восхищением к женщинам, <LogoText className="inline" />
+            </span>
+            <button
+              className="font-bold text-[11px] xxl:text-[15px] text-center py-[20px] xxl:py-[22px] px-[26px] xxl:px-[31px] bg-[#EADFD5] text-main-text rounded-[80px] z-11"
+              onClick={handleResetButton}
+            >
+              Попробовать еще
+            </button>
+          </div>
           <div
             className={
-              "w-[60vw] 2xl:w-[858px] h-[calc(100vh-175px)] bg-[#E0D0C080] rounded-[80px] rounded-b-none mt-[60px] relative transition-[height] "
+              "lg:w-[611px] xxl:w-[780px] 2xl:w-[858px] h-[calc(100%-128px)] xl:h-[calc(100%-130px)] xxl:h-[calc(100%-124px)] bg-[#E0D0C080] rounded-[80px] rounded-b-none mt-[60px] relative transition-[height] "
             }
           >
             <img
               src={song?.songImage}
               alt=""
-              className="absolute top-[48%] left-[50%] translate-[-50%] drop-shadow-[80px_80px_60px_#A38D7C4D] 2xl:w-[1457px] 2xl:h-[1457px] 2xl:max-w-[1457px] w-[100vw] h-[100vw] max-w-[100vw]  z-9"
+              className="absolute top-[48%] left-[50%] translate-[-50%] drop-shadow-[80px_80px_60px_#A38D7C4D]  2xl:w-[1457px] 2xl:h-[1457px] 2xl:max-w-[1457px] w-[80vw] h-[80vw] xxl:max-w-[1300px] lg:max-w-[1000px] max-w-[100vw] xxl:max-h-[1300px] lg:max-h-[1000px]  z-9"
             />
             <div className="absolute top-[calc(45%)] left-[calc(50%)] translate-[-50%] z-10">
               {!isPlay && (
@@ -687,7 +707,7 @@ export default function Page() {
                 </div>
               )}
               <button
-                className="w-[260px] h-[260px] flex items-center justify-center bg-white rounded-full text-main-btn font-bold text-[60px] cursor-pointer absolute top-[calc(50%)] left-[calc(50%)] translate-[-50%]"
+                className="lg:w-[166px] lg:h-[166px] xxl:w-[212px] xxl:h-[212px] 2xl:w-[260px] 2xl:h-[260px] flex items-center justify-center bg-white rounded-full text-main-btn font-bold text-[60px] cursor-pointer absolute top-[calc(50%)] left-[calc(50%)] translate-[-50%]"
                 onClick={handlePlayClick}
               >
                 {isPlay ? (
@@ -697,8 +717,8 @@ export default function Page() {
                   </svg>
                 ) : (
                   <>
-                    <span className="animate-pulsed w-[260px] h-[260px] rounded-full  block absolute top-[50%] left-[50%] border-7 border-white shadow-white translate-[-50%]"></span>
-                    <span className="animate-pulsed w-[260px] h-[260px] rounded-full  block absolute top-[50%] left-[50%] border-7 border-white shadow-white translate-[-50%] anim-delay-1"></span>
+                    <span className="animate-pulsed lg:w-[166px] lg:h-[166px] xxl:w-[212px] xxl:h-[212px] 2xl:w-[260px] 2xl:h-[260px] rounded-full  block absolute top-[50%] left-[50%] border-7 border-white shadow-white translate-[-50%]"></span>
+                    <span className="animate-pulsed lg:w-[166px] lg:h-[166px] xxl:w-[212px] xxl:h-[212px] 2xl:w-[260px] 2xl:h-[260px] rounded-full  block absolute top-[50%] left-[50%] border-7 border-white shadow-white translate-[-50%] anim-delay-1"></span>
                     <span className="relative z-5">
                       <svg width="64" height="78" viewBox="0 0 64 78" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M64 39L0.250004 77.1051L0.250007 0.894879L64 39Z" fill="#645349" />
@@ -719,10 +739,17 @@ export default function Page() {
               )}
             ></progress>
             <button
-              className="bg-white animate-pulsebtn xs:w-[188px] xs:h-[122px] w-[149px] h-[89px]  sm:mr-[45px] flex items-center justify-center rounded-[80px] absolute bottom-[3vh] 2xl:bottom-[7vh] right-[5%] z-10"
+              className="bg-white animate-pulsebtn xs:w-[188px] xs:h-[122px] lg:w-[103px] lg:h-[66px] xxl:w-[131px] xxl:h-[84px] 2xl:w-[188px] 2xl:h-[122px] w-[149px] h-[89px]  sm:mr-[45px] flex items-center justify-center rounded-[80px] absolute bottom-[3vh] 2xl:bottom-[7vh] right-[5%] z-10"
               onClick={handleShare}
             >
-              <svg width="75" height="64" viewBox="0 0 75 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg
+                className="w-[75px] h-[64px] lg:w-[42px] lg:h-[34px] xxl:w-[53px] xxl:h-[42px] "
+                width="75"
+                height="64"
+                viewBox="0 0 75 64"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
                   d="M41.4289 62.6521V44.9188C36.4809 45.3884 30.5488 46.4857 24.1491 48.8361C12.2744 53.1957 4.29124 59.8405 0 64C0.106271 60.1543 0.969196 44.6281 13.437 31.4756C22.8377 21.5601 34.0919 18.0008 41.431 16.7161V0L75 31.3261L41.431 62.6521H41.4289Z"
                   fill="#E9DFD5"
@@ -738,7 +765,10 @@ export default function Page() {
           alt="Цветок"
           className={clsx(
             "absolute z-1 lg:z-0 lg:bottom-[-283px] bottom-[-70px] left-[20vw] w-[186px] h-[186px] lg:w-[586px] lg:h-[586px] drop-shadow-[80px_80px_60px_#A38D7C4D]",
-            { "lg:w-[397px]! lg:h-[397px]! lg:right-[-5vw] lg:bottom-[20vh] lg:left-[auto]": isSpinEnd },
+            {
+              "lg:w-[280px]! lg:h-[280px]! 2xl:w-[397px]! 2xl:h-[397px]! lg:right-[-5vw] lg:bottom-[20vh] lg:left-[auto]":
+                isSpinEnd,
+            },
           )}
         />
         <img
@@ -746,7 +776,10 @@ export default function Page() {
           alt="Цветок"
           className={clsx(
             "absolute z-1 lg:z-0 top-[-20px] right-[-40px] w-[147px] h-[147px] lg:top-[auto] lg:bottom-[6vh] lg:left-[-100px] lg:w-[309px] lg:h-[309px] drop-shadow-[80px_80px_60px_#A38D7C4D]",
-            { " lg:left-[35vw] lg:bottom-[35vh] ": isSpinEnd },
+            {
+              " lg:left-[35vw] lg:bottom-[20vh] 2xl:bottom-[35vh] lg:w-[219px]! lg:h-[219px]! 2xl:w-[309px]! 2xl:h-[309px]!":
+                isSpinEnd,
+            },
           )}
         />
         <img
@@ -754,7 +787,10 @@ export default function Page() {
           alt="Цветок"
           className={clsx(
             "absolute z-1 lg:z-0 bottom-[50px] right-[0] w-[127px] h-[127px] lg:bottom-[auto] lg:top-[-140px] lg:right-[-140px] lg:w-[400px] lg:h-[400px] drop-shadow-[80px_80px_60px_#A38D7C4D]",
-            { " lg:w-[299px]! lg:h-[299px]! lg:bottom-[-100px]! lg:right-[30vw] lg:top-[auto] ": isSpinEnd },
+            {
+              " lg:w-[211px]! lg:h-[211px]! 2xl:w-[299px]! 2xl:h-[299px]! lg:bottom-[-100px]! lg:right-[30vw] lg:top-[auto] ":
+                isSpinEnd,
+            },
           )}
         />
         <img
@@ -762,7 +798,10 @@ export default function Page() {
           alt="Цветок"
           className={clsx(
             "absolute z-1 lg:z-0 bottom-[74px] left-[0] w-[153px] h-[153px] lg:bottom-[auto] lg:top-[-130px] lg:left-[40vw] lg:w-[484px] lg:h-[484px] drop-shadow-[80px_80px_60px_#A38D7C4D]",
-            { " lg:w-[607px]! lg:h-[607px]! lg:top-[20vh]! lg:right-[30vw]  ": isSpinEnd },
+            {
+              " lg:w-[426px]! lg:h-[426px]! 2xl:w-[607px]! 2xl:h-[607px]! lg:top-[10vh]! 2xl:top-[20vh]! lg:right-[30vw]  ":
+                isSpinEnd,
+            },
           )}
         />
       </div>

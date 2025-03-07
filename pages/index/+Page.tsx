@@ -604,7 +604,7 @@ export default function Page() {
               <br />С восхищением к женщинам, <LogoText className="inline" />
             </span>
             <button
-              className="font-bold text-[11px] xxl:text-[15px] text-center py-[20px] xxl:py-[22px] px-[26px] xxl:px-[31px] bg-[#EADFD5] text-main-text rounded-[80px] z-11"
+              className="font-bold text-[11px] xxl:text-[15px] text-center py-[20px] xxl:py-[22px] px-[26px] xxl:px-[31px] bg-[#EADFD5] text-main-text rounded-[80px] z-11 cursor-pointer"
               onClick={handleResetButton}
             >
               Попробовать еще
@@ -739,7 +739,7 @@ export default function Page() {
               )}
             ></progress>
             <button
-              className="bg-white animate-pulsebtn xs:w-[188px] xs:h-[122px] lg:w-[103px] lg:h-[66px] xxl:w-[131px] xxl:h-[84px] 2xl:w-[188px] 2xl:h-[122px] w-[149px] h-[89px]  sm:mr-[45px] flex items-center justify-center rounded-[80px] absolute bottom-[3vh] 2xl:bottom-[7vh] right-[5%] z-10"
+              className="bg-white animate-pulsebtn xs:w-[188px] xs:h-[122px] lg:w-[103px] lg:h-[66px] xxl:w-[131px] xxl:h-[84px] 2xl:w-[188px] 2xl:h-[122px] w-[149px] h-[89px]  sm:mr-[45px] flex items-center justify-center rounded-[80px] absolute bottom-[3vh] 2xl:bottom-[7vh] right-[5%] z-10 cursor-pointer"
               onClick={handleShare}
             >
               <svg
